@@ -52,19 +52,19 @@
                 {% if cart.coupon %}
                 <tr>
                     <td>Subtotal</td>
-                    <tdcolspan="4"></td>
-                    <td class = "text-end">{{ cart.get_total_price }} ₴</td>
+                    <td colspan="4"></td>
+                    <td class="text-end">{{ cart.get_total_price }} ₴</td>
                 </tr>
                 <tr>
-                    <td>"{{ cart.coupon.code }}" coupon ({{ cart.coupon.discount }})% off</td>
-                    <tdcolspan="4"></td>
-                    <td class = "text-end">- {{ cart.get_discount }} ₴</td>
+                    <td>"{{ cart.coupon.code }}" coupon ({{ cart.coupon.discount }}% off)</td>
+                    <td colspan="4"></td>
+                    <td class="text-end">- {{ cart.get_discount }} ₴</td>
                 </tr>
                 {% endif %}
-                <tr class ="fw-bold">
+                <tr class="fw-bold">
                     <td>Total</td>
                     <td colspan="4"></td>
-                    <td class = "text-end">{{ cart.get_total_price_after_discount }} ₴</td>
+                    <td class="text-end">{{ cart.get_total_price_after_discount }} ₴</td>
                 </tr>
             </tfoot>
         </tbody>
